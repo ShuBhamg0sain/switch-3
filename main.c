@@ -43,22 +43,22 @@ void main()
                     break;
             case 3: insert_end();
                     break;
-          //  case 4: insert_pos();
+          //  case 4: 
           //          break;
-            case 5: display();
-                    break;
+          //  case 5: 
+          //          break;
             case 6: delete_beg();
                     break;
             case 7: delete_end();
                     break;
-         //   case 8: delete_pos();
+         //   case 8: 
          //           break;
-            case 9: delete_end();
-                    break;
+         //   case 9: 
+         //           break;
          //   case 10:                     
-         //            break;
-         //   case 11: delete_beg();
-         //            break;
+                       break;
+            case 11: display();
+                     break;
             case 12: exit(0);
                      break;
                      default: printf("Wrong Choice!!");
