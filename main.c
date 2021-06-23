@@ -45,25 +45,31 @@ int main()
         switch(ch)
         {
  
-            case 1: insert_beg();
-                    break;
+          //  case 1: insert_beg();
+            //        break;
             case 2: insert_beg();
                     break;
             case 3: insert_end();
                     break;
-           // case 4: insert_pos();
+         //   case 4: insert_pos();
            //         break;
-            case 5: display();
-                    break;
+         //   case 5: display();
+          //          break;
             case 6: delete_beg();
                     break;
             case 7: delete_end();
                     break;
           //  case 8: delete_pos();
-                    break;
-            case 9: exit(0);
-                    break;
-                    default: printf("Wrong Choice!!");
+            //        break;
+           // case 9: insert_pos();
+              //      break;
+           // case 10: display();
+            //         break;
+         //   case 11: delete_beg();
+              //       break;
+            case 12: exit(0);
+                     break;
+                     default: printf("Wrong Choice!!");
         }
     }
     return 0;
