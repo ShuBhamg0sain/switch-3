@@ -21,8 +21,20 @@ int main()
  
     while(1)
     {
-        printf("\n\n---- Singly Linked List(SLL) Menu ----");
-        printf("\n1.Insert\n2.Display\n3.Delete\n4.Exit\n\n");
+        printf("\n\n *****MAIN MENU *****");
+printf("\n 1: Create a list");
+printf("\n 2: Display the list");
+printf("\n 3: Add a node at the beginning");
+printf("\n 4: Add a node at the end");
+printf("\n 5: Add a node before a given node");
+printf("\n 6: Add a node after a given node");
+printf("\n 7: Delete a node from the beginning");
+printf("\n 8: Delete a node from the end");
+printf("\n 9: Delete a given node");
+printf("\n 10: Delete a node after a given node");
+printf("\n 11: Delete the entire list");
+printf("\n 12: Sort the list");
+printf("\n 13: EXIT");
         printf("Enter your choice(1-4):");
         scanf("%d",&ch);
  
