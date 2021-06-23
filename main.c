@@ -18,7 +18,7 @@ int main()
     void delete_beg();
     void delete_end();
     struct node *create_ll(struct node *);
-    void search_item(int value);
+    int search(int key);
 
     while(1)
     {
@@ -59,10 +59,15 @@ int main()
          //   case 9: 
          //           break;
             case 10: 
-                      printf("\nEnter an item to search it from List\n");
-                      scanf("%d", &value);
-                      search_ll(value);
-                    break;
+                   int index, keyToSearch;
+                   printf("\nEnter element to search: ");
+                   scanf("%d", &keyToSearch);
+                   index = search(keyToSearch);   
+                   if (index >= 0)
+                   printf("%d found in the list at position %d\n", keyToSearch, index + 1);
+               else
+                   printf("%d not found in the list.\n", keyToSearch);
+                   break;
             case 11: display();
                      break;
             case 12: exit(0);
@@ -193,36 +198,23 @@ else
  return start;
 }
 
-void search_item(int value)
+int search(int key)
 {
-    node *searchNode = head;
-    int flag = 0;
+    int index;
+    struct node *curNode;
 
-    while(searchNode!=NULL)
+    index = 0;
+    curNode = start;
+
+    while (curNode != NULL && curNode->data != key)
     {
-        if(searchNode->number==value)
-        {
-            printf("%d is present in this list. Memory address is %d\n", value, searchNode);
-            flag = 1;
-            break;
-        }
-        else
-            searchNode = searchNode->next;
+        index++;
+        curNode = curNode->next;
     }
 
-    if(flag==0)
-        printf("Item not found\n");
 
+    return (curNode != NULL) ? index : -1;
 }
-
-
-
-
-
-
-
-
-
 
 
 
