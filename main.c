@@ -45,7 +45,7 @@ int main()
         switch(ch)
         {
  
-            case 1: insert_beg();
+            case 1: create();
                     break;
             case 2: insert_beg();
                     break;
@@ -63,7 +63,7 @@ int main()
             //        break;
             case 9: delete_end();
                     break;
-            case 10: display();
+            case 10: ser();
                      break;
             case 11: delete_beg();
                      break;
@@ -167,20 +167,6 @@ void delete_end()
         free(t);
     }
 }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 void ser()
 {
 q=start;
@@ -205,7 +191,7 @@ printf("\nElement is Not Found");
 void create()
 
 {
-t=(struct node *)malloc(sizeof(struct node));
+t=(struct node*)malloc(sizeof(struct node));
 t->data=data;
 t->next=NULL;
 if(start==NULL)
