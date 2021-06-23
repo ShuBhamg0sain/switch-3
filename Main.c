@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<conio.h>
-#include<process.h>
  
 struct node
 {
@@ -37,8 +36,8 @@ int main()
  
         switch(ch)
         {
-            case 1: 
-                    break;
+           // case 1: 
+           //         break;
 
             case 2: insert_beg();
                     break;
@@ -46,32 +45,32 @@ int main()
             case 3: insert_end();
                     break;
 
-            case 4: insert_end(start);
+           // case 4: insert_end(start);
+           //         break;
+
+          //  case 5: insert_before(start);
+            //        break;
+
+            case 6: delete_beg()
                     break;
 
-            case 5: insert_before(start);
+            case 7: delete_end()
                     break;
 
-            case 6: start = insert_after(start);
-                    break;
+          //  case 8: start = delete_end(start);
+             //       break;
 
-            case 7: start = delete_beg(start);
-                    break;
+           // case 9: start = delete_node(start);
+         //           break;
 
-            case 8: start = delete_end(start);
-                    break;
+           // case 10: start = delete_after(start);
+          //           break;
 
-            case 9: start = delete_node(start);
-                    break;
-
-            case 10: start = delete_after(start);
+            case 11: display()
                      break;
 
-            case 11: start = delete_list(start);
-                     break;
-
-            case 12: exit(0);
-                     break;
+          //  case 12: exit(0);
+           //          break;
             default: printf("Wrong Choice!!");
         }
     }
@@ -119,40 +118,6 @@ void insert_end()
         q->next=t;
     }
 }
- 
-int insert_pos()
-{
-    int pos,i,num;
-    if(start==NULL)
-    {
-        printf("List is empty!!");
-        return 0;
-    }
- 
-    t=(struct node*)malloc(sizeof(struct node));
-    printf("Enter data:");
-    scanf("%d",&num);
-    printf("Enter position to insert:");
-    scanf("%d",&pos);
-    t->data=num;
- 
-    q=start;
-    for(i=1;i<pos-1;i++)
-    {
-        if(q->next==NULL)
-        {
-            printf("There are less elements!!");
-            return 0;
-        }
- 
-        q=q->next;
-    }
- 
-    t->next=q->next;
-    q->next=t;
-    return 0;
-}
- 
 void display()
 {
     if(start==NULL)
@@ -203,71 +168,4 @@ void delete_end()
         printf("Deleted element is %d",t->data);
         free(t);
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-int delete_pos()
-{
-    int pos,i;
- 
-    if(start==NULL)
-    {
-        printf("List is empty!!");
-        return 0;
-    }
- 
-    printf("Enter position to delete:");
-    scanf("%d",&pos);
- 
-    q=start;
-    for(i=1;i<pos-1;i++)
-    {
-        if(q->next==NULL)
-        {
-            printf("There are less elements!!");
-            return 0;
-        }
-        q=q->next;
-    }
- 
-    t=q->next;
-    q->next=t->next;
-    printf("Deleted element is %d",t->data);
-    free(t);
- 
-    return 0;
 }
