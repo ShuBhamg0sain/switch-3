@@ -7,10 +7,8 @@ struct node
     struct node *next;
 }*start=NULL,*q,*t;
  
-int main()
+void main()
 {
-    node *head=NULL;
-    int value, number;
     int ch;
     void insert_beg();
     void insert_end();
@@ -18,10 +16,7 @@ int main()
     void delete_beg();
     void delete_end();
     struct node *create_ll(struct node *);
-    int search(int key);
 
-    while(1)
-    {
         printf("\n\n *****MAIN MENU *****");
         printf("\n 1: Create a list");
         printf("\n 2: insert at front");
@@ -58,16 +53,8 @@ int main()
          //           break;
          //   case 9: 
          //           break;
-            case 10: 
-                   int index, keyToSearch;
-                   printf("\nEnter element to search: ");
-                   scanf("%d", &keyToSearch);
-                   index = search(keyToSearch);   
-                   if (index >= 0)
-                   printf("%d found in the list at position %d\n", keyToSearch, index + 1);
-               else
-                   printf("%d not found in the list.\n", keyToSearch);
-                   break;
+          //  case 10: 
+           //           break;
             case 11: display();
                      break;
             case 12: exit(0);
@@ -75,8 +62,7 @@ int main()
                      default: printf("Wrong Choice!!");
       }
     }
- return 0;
-}
+ }
  
 void insert_beg()
 {
@@ -198,53 +184,3 @@ else
  return start;
 }
 
-int search(int key)
-{
-    int index;
-    struct node *curNode;
-
-    index = 0;
-    curNode = start;
-
-    while (curNode != NULL && curNode->data != key)
-    {
-        index++;
-        curNode = curNode->next;
-    }
-
-
-    return (curNode != NULL) ? index : -1;
-}
-
-
-
-
-
-
-
-/*
-struct node *search_ll(struct node *start)
-{ 
-    int val;
-    printf("\nEnter an item to search it from List\n");
-    scanf("%d", &val);
-    search_ll(val);                     
-    node *searchval = start;
-    int flag = 0;
-
-    while(searchval!=NULL)
-    {
-        if(searchval->data==val)
-        {
-            printf("%d is present in this list. Memory address is %d\n", val, searchval);
-            flag = 1;
-            break;
-        }
-        else
-            searchval = searchval->next;
-    }
-
-    if(flag==0)
-        printf("Item not found\n");
-
-}*/
