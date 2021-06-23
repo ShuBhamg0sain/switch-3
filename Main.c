@@ -37,7 +37,7 @@ int main()
  
         switch(ch)
         {
-            case 1: insert_beg();
+            case 1: 
                     break;
 
             case 2: insert_beg();
