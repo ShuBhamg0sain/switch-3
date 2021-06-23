@@ -18,11 +18,13 @@ struct node
 int main()
 {
     int ch;
+    void search();
+    void create();
     void insert_beg();
     void insert_end();
     void display();
     void delete_beg();
-    void delete_end();
+    void delete_end();struct node *q,*tmp;
  
     while(1)
     {
@@ -45,28 +47,28 @@ int main()
         switch(ch)
         {
  
-            case 1: insert_beg();
+            case 1: create();
                     break;
             case 2: insert_beg();
                     break;
             case 3: insert_end();
                     break;
-            case 4: insert_pos();
-                    break;
-            case 5: display();
-                    break;
+            //case 4: insert_pos();
+            //        break;
+           //   5: display();
+           //         break;
             case 6: delete_beg();
                     break;
             case 7: delete_end();
                     break;
-            case 8: delete_pos();
-                    break;
-            case 9: insert_pos();
-                    break;
-            case 10: display();
+           // case 8: delete_pos();
+            //        break;
+          //  case 9: insert_pos();
+            //        break;
+            case 10: search();
                      break;
-            case 11: delete_beg();
-                     break;
+           // case 11: delete_beg();
+            //         break;
             case 12: exit(0);
                      break;
                      default: printf("Wrong Choice!!");
@@ -168,23 +170,9 @@ void delete_end()
     }
 }
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-void ser(int data)
+void search()
 {
-struct node *q,*tmp;
-q=start;
+
 while(q!=NULL)
 {
 if(q->data==data)
@@ -194,7 +182,7 @@ break;
 }
 else
 {
-q=q->link;
+q=q->next;
 }
 }
 if(q==NULL)
@@ -203,23 +191,22 @@ printf(“\nElement is Not Found”);
 }
 }
 
-void create(int data)
+void create()
 
 {
-struct node *q,*tmp;
-tmp=(struct node *)malloc(sizeof(struct node));
-tmp->data=data;
-tmp->link=NULL;
+t=(struct node *)malloc(sizeof(struct node));
+t->data=data;
+t->next=NULL;
 if(start==NULL)
 {
-start=tmp;
+start=t;
 }
 else
 {
 q=start;
-while(q->link!=NULL)
-q=q->link;
-q->link=tmp;
+while(q->next!=NULL)
+q=q->next;
+q->next=t;
 }
 }
 
