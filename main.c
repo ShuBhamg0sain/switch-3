@@ -18,6 +18,8 @@ struct node
 int main()
 {
     int ch;
+    void create();
+    void ser();
     void insert_beg();
     void insert_end();
     void display();
