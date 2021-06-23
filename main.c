@@ -7,7 +7,7 @@ struct node
     struct node *next;
 }*start=NULL,*q,*t;
  
-void main()
+int main()
 {
     int ch;
     void insert_beg();
