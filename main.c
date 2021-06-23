@@ -188,7 +188,7 @@ while(q!=NULL)
 {
 if(q->data==data)
 {
-printf(“\nElement Is Found”);
+printf("\nElement Is Found");
 break;
 }
 else
@@ -198,7 +198,7 @@ q=q->next;
 }
 if(q==NULL)
 {
-printf(“\nElement is Not Found”);
+printf("\nElement is Not Found");
 }
 }
 
