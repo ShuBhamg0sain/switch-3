@@ -193,8 +193,8 @@ else
 void search_ll(int val)
 {
     printf("\nEnter an item to search it from List\n");
-    scanf("%d", &value);
-    search_ll(value);                     
+    scanf("%d", &val);
+    search_ll(val);                     
     node *searchval = start;
     int flag = 0;
 
