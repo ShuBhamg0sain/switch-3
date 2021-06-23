@@ -23,34 +23,25 @@ int main()
     {
         printf("\n\n *****MAIN MENU *****");
         printf("\n 1: Create a list");
-        printf("\n 2: Display the list");
-        printf("\n 3: Add a node at the beginning");
-        printf("\n 4: Add a node at the end");
-        printf("\n 5: Add a node before a given node");
-        printf("\n 6: Add a node after a given node");
-        printf("\n 7: Delete a node from the beginning");
-        printf("\n 8: Delete a node from the end");
-        printf("\n 9: Delete a given node");
-        printf("\n 10: Delete a node after a given node");
-        printf("\n 11: Delete the entire list");
-        printf("\n 12: Sort the list");
-        printf("\n 13: EXIT");
-        printf("Enter your choice(1-4):");
+        printf("\n 2: insert at front");
+        printf("\n 3: insert at end");
+        printf("\n 4: insert before a node");
+        printf("\n 5: insert after a node");
+        printf("\n 6: delete at front");
+        printf("\n 7: delete at end");
+        printf("\n 8: delete before a node");
+        printf("\n 9: delete after a node");
+        printf("\n 10: search");
+        printf("\n 11: Display");
+        printf("\n 12: EXIT");
+        printf("Enter your choice(1-12):");
         scanf("%d",&ch);
- 
-        switch(ch)
-        {
-            case 1:
-                    printf("\n---- Insert Menu ----");
-                    printf("\n1.Insert at beginning\n2.Insert at end\n3.Insert at specified position\n4.Exit");
-                    printf("\n\nEnter your choice(1-4):");
-                    scanf("%d",&ch);
  
                     switch(ch)
                     {
-                        case 1: insert_beg();
+                        case 1: 
                                 break;
-                        case 2: insert_end();
+                        case 2: 
                                 break;
                         case 3: insert_pos();
                                 break;
@@ -59,13 +50,18 @@ int main()
                     }
                     break;
  
-            case 2: display();
+            case 2: insert_beg();
                     break;
  
-            case 3: printf("\n---- Delete Menu ----");
-                    printf("\n1.Delete from beginning\n2.Delete from end\n3.Delete from specified position\n4.Exit");
-                    printf("\n\nEnter your choice(1-4):");
-                    scanf("%d",&ch);
+            case 3: insert_end();
+                    break;
+                    
+
+
+
+
+
+
  
                     switch(ch)
                     {
