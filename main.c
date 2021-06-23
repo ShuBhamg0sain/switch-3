@@ -7,7 +7,7 @@ struct node
     struct node *next;
 }*start=NULL,*q,*t;
  
-void main()
+int main()
 {
     int ch;
     void insert_beg();
@@ -15,8 +15,9 @@ void main()
     void display();
     void delete_beg();
     void delete_end();
-    struct node *create_ll(struct node *);
-
+ 
+    while(1)
+    {
         printf("\n\n *****MAIN MENU *****");
         printf("\n 1: Create a list");
         printf("\n 2: insert at front");
@@ -35,34 +36,30 @@ void main()
  
         switch(ch)
         {
-            case 1: start = create_ll(start);
+ 
+            case 1: insert_beg();
                     break;
             case 2: insert_beg();
                     break;
             case 3: insert_end();
                     break;
-          //  case 4: 
-          //          break;
-          //  case 5: 
-          //          break;
+           // case 4: insert_pos();
+           //         break;
+            case 5: display();
+                    break;
             case 6: delete_beg();
                     break;
             case 7: delete_end();
                     break;
-         //   case 8: 
-         //           break;
-         //   case 9: 
-         //           break;
-          //  case 10: 
-           //           break;
-            case 11: display();
-                     break;
-            case 12: exit(0);
-                     break;
-                     default: printf("Wrong Choice!!");
-      }
+          //  case 8: delete_pos();
+                    break;
+            case 9: exit(0);
+                    break;
+                    default: printf("Wrong Choice!!");
+        }
     }
- }
+    return 0;
+}
  
 void insert_beg()
 {
@@ -74,14 +71,14 @@ void insert_beg()
  
     if(start==NULL)        //If list is empty
     {
-       t->next=NULL;
-       start=t;
+        t->next=NULL;
+        start=t;
     }
     else
     {
-       t->next=start;
-       start=t;
-   }
+        t->next=start;
+        start=t;
+    }
 }
  
 void insert_end()
@@ -95,17 +92,16 @@ void insert_end()
  
     if(start==NULL)        //If list is empty
     {
-       start=t;
+        start=t;
     }
     else
     {
-       q=start;
-       while(q->next!=NULL)
-       q=q->next;
-       q->next=t;
+        q=start;
+        while(q->next!=NULL)
+        q=q->next;
+        q->next=t;
     }
 }
-
 void display()
 {
     if(start==NULL)
@@ -157,30 +153,4 @@ void delete_end()
         free(t);
     }
 }
-
-struct node *create_ll(struct node *start)
-{
-struct node *new_node, *ptr;
-int val;
- printf("enter the new value");
- scanf("%d",&val);
- new_node=(struct node *) malloc(sizeof(struct node));
- new_node->data=val;
- new_node->next=NULL;
- ptr=start;
-
- if(start==NULL)
- {
- start=new_node;
- }
-else
- {
-   while(ptr->next!=NULL)   
-    {
-      ptr=ptr->next;
-    }
-  ptr->next=new_node;
-   }
- return start;
-}
-
+ 
