@@ -9,6 +9,7 @@ struct node
  
 int main()
 {
+    int val;
     int ch;
     void insert_beg();
     void insert_end();
@@ -16,6 +17,7 @@ int main()
     void delete_beg();
     void delete_end();
     struct node *create_ll(struct node *);
+    void search_ll(int)
 
     while(1)
     {
@@ -55,10 +57,7 @@ int main()
          //           break;
          //   case 9: 
          //           break;
-         //   case 10: 
-                       printf("\nEnter an item to search it from List\n");
-                       scanf("%d", &value);
-                       search_ll(value);                     
+         //   case 10: search_ll();
          //            break;
             case 11: display();
                      break;
@@ -191,15 +190,17 @@ else
 }
 
 
-
 void search_ll(int val)
 {
+    printf("\nEnter an item to search it from List\n");
+    scanf("%d", &value);
+    search_ll(value);                     
     node *searchval = start;
     int flag = 0;
 
     while(searchval!=NULL)
     {
-        if(searchval->num==val)
+        if(searchval->data==val)
         {
             printf("%d is present in this list. Memory address is %d\n", val, searchval);
             flag = 1;
