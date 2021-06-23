@@ -55,7 +55,10 @@ int main()
          //           break;
          //   case 9: 
          //           break;
-         //   case 10:                     
+         //   case 10: 
+                       printf("\nEnter an item to search it from List\n");
+                       scanf("%d", &value);
+                       search_ll(value);                     
          //            break;
             case 11: display();
                      break;
@@ -185,4 +188,28 @@ else
   ptr->next=new_node;
    }
  return start;
+}
+
+
+
+void search_ll(int val)
+{
+    node *searchval = start;
+    int flag = 0;
+
+    while(searchval!=NULL)
+    {
+        if(searchval->num==val)
+        {
+            printf("%d is present in this list. Memory address is %d\n", val, searchval);
+            flag = 1;
+            break;
+        }
+        else
+            searchval = searchval->next;
+    }
+
+    if(flag==0)
+        printf("Item not found\n");
+
 }
