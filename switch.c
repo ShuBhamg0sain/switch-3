@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<conio.h>
-#include<process.h>
  
 struct node
 {
@@ -21,53 +20,40 @@ int main()
  
     while(1)
     {
-        printf("\n\n---- Singly Linked List(SLL) Menu ----");
-        printf("\n1.Insert\n2.Display\n3.Delete\n4.Exit\n\n");
-        printf("Enter your choice(1-4):");
+        printf("\n\n *****MAIN MENU *****");
+        printf("\n 1: Create a list");
+        printf("\n 2: insert at front");
+        printf("\n 3: insert at end");
+        printf("\n 4: insert before a node");
+        printf("\n 5: insert after a node");
+        printf("\n 6: delete at front");
+        printf("\n 7: delete at end");
+        printf("\n 8: delete before a node");
+        printf("\n 9: delete after a node");
+        printf("\n 10: search");
+        printf("\n 11: Display");
+        printf("\n 12: EXIT");
+        printf("Enter your choice(1-12):");
         scanf("%d",&ch);
  
         switch(ch)
         {
-            case 1:
-                    printf("\n---- Insert Menu ----");
-                    printf("\n1.Insert at beginning\n2.Insert at end\n3.Insert at specified position\n4.Exit");
-                    printf("\n\nEnter your choice(1-4):");
-                    scanf("%d",&ch);
- 
-                    switch(ch)
-                    {
-                        case 1: insert_beg();
-                                break;
-                        case 2: insert_end();
-                                break;
-                        case 3: insert_pos();
-                                break;
-                        case 4: exit(0);
-                        default: printf("Wrong Choice!!");
-                    }
+
+            case 1: insert_beg();
                     break;
- 
-            case 2: display();
+            case 2: insert_end();
                     break;
- 
-            case 3: printf("\n---- Delete Menu ----");
-                    printf("\n1.Delete from beginning\n2.Delete from end\n3.Delete from specified position\n4.Exit");
-                    printf("\n\nEnter your choice(1-4):");
-                    scanf("%d",&ch);
- 
-                    switch(ch)
-                    {
-                        case 1: delete_beg();
-                                break;
-                        case 2: delete_end();
-                                break;
-                        case 3: delete_pos();
-                                break;
-                        case 4: exit(0);
-                        default: printf("Wrong Choice!!");
-                    }
+            case 3: insert_pos();
                     break;
-            case 4: exit(0);
+            case 4: display();
+                    break;
+            case 5: delete_beg();
+                    break;
+            case 6: delete_end();
+                    break;
+            case 7: delete_pos();
+                    break;
+            case 8: exit(0);
                     default: printf("Wrong Choice!!");
         }
     }
