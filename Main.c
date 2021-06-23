@@ -19,8 +19,6 @@ int main()
     void delete_end();
     int delete_pos();
  
-    while(1)
-    {
         printf("\n\n *****MAIN MENU *****");
         printf("\n 1: Create a list");
         printf("\n 2: insert at front");
@@ -37,46 +35,44 @@ int main()
         printf("Enter your choice(1-12):");
         scanf("%d",&ch);
  
-                    switch(ch)
-                    {
-                        case 1: 
-                                break;
-                        case 2: 
-                                break;
-                        case 3: insert_pos();
-                                break;
-                        case 4: exit(0);
-                        default: printf("Wrong Choice!!");
-                    }
+        switch(ch)
+        {
+            case 1: insert_beg();
                     break;
- 
+
             case 2: insert_beg();
                     break;
  
             case 3: insert_end();
                     break;
-                    
 
-
-
-
-
-
- 
-                    switch(ch)
-                    {
-                        case 1: delete_beg();
-                                break;
-                        case 2: delete_end();
-                                break;
-                        case 3: delete_pos();
-                                break;
-                        case 4: exit(0);
-                        default: printf("Wrong Choice!!");
-                    }
+            case 4: insert_end(start);
                     break;
-            case 4: exit(0);
-                    default: printf("Wrong Choice!!");
+
+            case 5: insert_before(start);
+                    break;
+
+            case 6: start = insert_after(start);
+                    break;
+
+            case 7: start = delete_beg(start);
+                    break;
+
+            case 8: start = delete_end(start);
+                    break;
+
+            case 9: start = delete_node(start);
+                    break;
+
+            case 10: start = delete_after(start);
+                     break;
+
+            case 11: start = delete_list(start);
+                     break;
+
+            case 12: exit(0);
+                     break;
+            default: printf("Wrong Choice!!");
         }
     }
     return 0;
