@@ -1,11 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include<stdio.h>
 #include<conio.h>
  
@@ -45,7 +37,6 @@ void main()
  
         switch(ch)
         {
- 
             case 1: start = create_ll(start);
                     break;
             case 2: insert_beg();
@@ -71,7 +62,7 @@ void main()
             case 12: exit(0);
                      break;
                      default: printf("Wrong Choice!!");
-        }
+      }
     }
  return 0;
 }
@@ -86,14 +77,14 @@ void insert_beg()
  
     if(start==NULL)        //If list is empty
     {
-        t->next=NULL;
-        start=t;
+       t->next=NULL;
+       start=t;
     }
     else
     {
-        t->next=start;
-        start=t;
-    }
+       t->next=start;
+       start=t;
+   }
 }
  
 void insert_end()
@@ -107,16 +98,17 @@ void insert_end()
  
     if(start==NULL)        //If list is empty
     {
-        start=t;
+       start=t;
     }
     else
     {
-        q=start;
-        while(q->next!=NULL)
-        q=q->next;
-        q->next=t;
+       q=start;
+       while(q->next!=NULL)
+       q=q->next;
+       q->next=t;
     }
 }
+
 void display()
 {
     if(start==NULL)
