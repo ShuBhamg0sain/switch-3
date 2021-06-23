@@ -53,12 +53,12 @@ start=NULL;
         {
  
             case 1: 
-                  printf(“\n\nHOW MANY NODES U WANT TO CREATE\n”);
-                  scanf(“%d”,&n);
+                  printf("\n\nHOW MANY NODES U WANT TO CREATE\n");
+                  scanf("%d",&n);
                   for(i=0;i<n;i++)
                   {
-                  printf(“\nENTER THE DATA”);
-                  scanf(“%d”,&m);
+                  printf("\nENTER THE DATA");
+                  scanf("%d",&m);
                   create(m);
                   }
                     break;
@@ -79,8 +79,8 @@ start=NULL;
             case 9: delete_end();
                     break;
             case 10: 
-                     printf(“\nENTER THE ELEMENT FOR SEARCH”);
-                     scanf(“%d”,&m);
+                     printf("\nENTER THE ELEMENT FOR SEARCH");
+                     scanf("%d",&m);
                      ser(m);
                      break;
             case 11: delete_beg();
@@ -210,7 +210,7 @@ while(q!=NULL)
 {
 if(q->data==data)
 {
-printf(“\nElement Is Found”);
+printf("\nElement Is Found");
 break;
 }
 else
@@ -220,6 +220,6 @@ q=q->link;
 }
 if(q==NULL)
 {
-printf(“\nElement is Not Found”);
+printf("\nElement is Not Found");
 }
 }
