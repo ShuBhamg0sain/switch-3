@@ -13,7 +13,6 @@ struct node
 {
     int data;
     struct node *next;
-    struct node *link;
 }*start=NULL,*q,*t;
  
 void main()
@@ -24,13 +23,7 @@ void main()
     void display();
     void delete_beg();
     void delete_end();
-    void create(int);
-    void ser(int);
 
-int n,i,m,a,pos;
-clrscr();
-start=NULL;
- 
     while(1)
     {
         printf("\n\n *****MAIN MENU *****");
@@ -52,44 +45,34 @@ start=NULL;
         switch(ch)
         {
  
-            case 1: 
-                  printf("\n\nHOW MANY NODES U WANT TO CREATE\n");
-                  scanf("%d",&n);
-                  for(i=0;i<n;i++)
-                  {
-                  printf("\nENTER THE DATA");
-                  scanf("%d",&m);
-                  create(m);
-                  }
-                    break;
+           // case 1: 
+           //         break;
             case 2: insert_beg();
                     break;
             case 3: insert_end();
                     break;
           //  case 4: insert_pos();
-             //       break;
+          //          break;
             case 5: display();
                     break;
             case 6: delete_beg();
                     break;
             case 7: delete_end();
                     break;
-          //  case 8: delete_pos();
-            //        break;
+         //   case 8: delete_pos();
+         //           break;
             case 9: delete_end();
                     break;
-            case 10: 
-                     printf("\nENTER THE ELEMENT FOR SEARCH");
-                     scanf("%d",&m);
-                     ser(m);
-                     break;
-            case 11: delete_beg();
-                     break;
+         //   case 10:                     
+         //            break;
+         //   case 11: delete_beg();
+         //            break;
             case 12: exit(0);
                      break;
                      default: printf("Wrong Choice!!");
         }
     }
+ return 0;
 }
  
 void insert_beg()
@@ -183,43 +166,4 @@ void delete_end()
         printf("Deleted element is %d",t->data);
         free(t);
     }
-}
-void create(int data)
-{
-struct node *q,*tmp;
-tmp=(struct node *)malloc(sizeof(struct node));
-tmp->data=data;
-tmp->link=NULL;
-if(start==NULL)
-{
-start=tmp;
-}
-else
-{
-q=start;
-while(q->link!=NULL)
-q=q->link;
-q->link=tmp;
-}
-}
-void ser(int data)
-{
-struct node *q,*tmp;
-q=start;
-while(q!=NULL)
-{
-if(q->data==data)
-{
-printf("\nElement Is Found");
-break;
-}
-else
-{
-q=q->link;
-}
-}
-if(q==NULL)
-{
-printf("\nElement is Not Found");
-}
 }
