@@ -15,7 +15,7 @@ int main()
     void display();
     void delete_beg();
     void delete_end();
- 
+    struct node *create_ll(struct node *);
     while(1)
     {
         printf("\n\n *****MAIN MENU *****");
@@ -37,7 +37,7 @@ int main()
         switch(ch)
         {
  
-            case 1: insert_beg();
+            case 1: start = create_ll(start);
                     break;
             case 2: insert_beg();
                     break;
@@ -159,4 +159,28 @@ void delete_end()
         free(t);
     }
 }
- 
+
+ struct node *create_ll(struct node *start)
+{
+struct node *new_node, *ptr;
+int val;
+printf("enter the new value");
+scanf("%d",&val);
+new_node=(struct node *) malloc(sizeof(struct node));
+new_node->data=val;
+new_node->next=NULL;
+ptr=start;
+if(start==NULL)
+{
+start=new_node;
+}
+else
+{
+ while(ptr->next!=NULL)   
+ {
+     ptr=ptr->next;
+ }
+ ptr->next=new_node;
+}
+return start;
+}
