@@ -18,13 +18,11 @@ struct node
 int main()
 {
     int ch;
-    void search();
-    void create();
     void insert_beg();
     void insert_end();
     void display();
     void delete_beg();
-    void delete_end();struct node *q,*tmp;
+    void delete_end();
  
     while(1)
     {
@@ -47,28 +45,28 @@ int main()
         switch(ch)
         {
  
-            case 1: create();
+            case 1: insert_beg();
                     break;
             case 2: insert_beg();
                     break;
             case 3: insert_end();
                     break;
-            //case 4: insert_pos();
-            //        break;
-           //   5: display();
-           //         break;
+          //  case 4: insert_pos();
+             //       break;
+            case 5: display();
+                    break;
             case 6: delete_beg();
                     break;
             case 7: delete_end();
                     break;
-           // case 8: delete_pos();
+          //  case 8: delete_pos();
             //        break;
-          //  case 9: insert_pos();
-            //        break;
-            case 10: search();
+            case 9: delete_end();
+                    break;
+            case 10: display();
                      break;
-           // case 11: delete_beg();
-            //         break;
+            case 11: delete_beg();
+                     break;
             case 12: exit(0);
                      break;
                      default: printf("Wrong Choice!!");
@@ -170,9 +168,22 @@ void delete_end()
     }
 }
  
-void search()
-{
 
+
+
+
+
+
+
+
+
+
+
+
+
+void ser()
+{
+q=start;
 while(q!=NULL)
 {
 if(q->data==data)
