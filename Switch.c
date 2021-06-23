@@ -83,45 +83,33 @@ printf("\n\n Enter your option : ");
 scanf("%d", &option);
 switch(option)
 {
-case 1:
-      start = create_ll(start);
-      printf("\n LINKED LIST CREATED");
+case 1: start = create_ll(start);
+printf("\n LINKED LIST CREATED");
 break;
-case 2:
-      start = display(start);
-      printf("in case 2");
+case 2: printf("in case 2");
+start = display(start);
 break;
-case 3: 
-      start = insert_beg(start);
+/*case 3: start = insert_beg(start);
 break;
-case 4:
-      start = insert_end(start);
+case 4: start = insert_end(start);
 break;
-case 5:
-      start = insert_before(start);
+case 5: start = insert_before(start);
 break;
-case 6: 
-      start = insert_after(start);
+case 6: start = insert_after(start);
 break;
-case 7: 
-      start = delete_beg(start);
+case 7: start = delete_beg(start);
 break;
-case 8:
-      start = delete_end(start);
+case 8: start = delete_end(start);
 break;
-case 9: 
-      start = delete_node(start);
+case 9: start = delete_node(start);
 break;
-case 10: 
-       start = delete_after(start);
+case 10: start = delete_after(start);
 break;
-case 11:
-       start = delete_list(start);
-       printf(“\n LINKED LIST DELETED”);
+case 11: start = delete_list(start);
+printf(“\n LINKED LIST DELETED”);
 break;
-case 12: 
-       start = sort_list(start);
-break;
+case 12: start = sort_list(start);
+break;*/
 }
 }while(option !=13);
 getch();
